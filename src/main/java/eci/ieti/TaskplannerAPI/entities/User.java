@@ -1,11 +1,14 @@
 package eci.ieti.taskplannerapi.entities;
 
+
 public class User {
+    public String idUser;
     public String name;
     public String password;
     public String email;
 
-	public User(String name, String password, String email) {
+    public User(String idUser, String name, String password, String email) {
+		this.idUser = idUser;
 		this.name = name;
 		this.password = password;
 		this.email = email;
@@ -29,9 +32,15 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-    
+    public String getIdUser() {
+		return idUser;
+	}
+	public void setIdUser(String idUser) {
+		this.idUser = idUser;
+	}
+
 	@Override
 	public String toString() {
-		return "User [email=" + email + ", name=" + name + ", password=" + password + "]";
+		return "User [email=" + email + ", idUser=" + idUser + ", name=" + name + ", password=" + password + "]";
 	}
 }
